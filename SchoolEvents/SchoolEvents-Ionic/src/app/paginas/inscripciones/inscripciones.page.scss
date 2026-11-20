@@ -1,0 +1,56 @@
+.pagina-blanca{
+  --background:#fff}
+.interior{
+  padding:24px 20px}
+.perfil-mini{
+  display:flex;
+  gap:12px;
+  align-items:center;
+  background:#e5f6fe;
+  border-radius:8px;
+  padding:12px}
+.perfil-mini img{
+  width:48px;
+  height:48px;
+  border-radius:50%}
+.perfil-mini h1{
+  margin:0;
+  font-size:15px;
+  color:#10192a}
+.perfil-mini p{
+  margin:4px 0 0;
+  font-size:11px;
+  color:#737373}
+.interior h2{
+  font-size:17px;
+  margin:25px 0}
+.lista{
+  display:grid;
+  gap:25px}
+.cancelar{
+  display:block;
+  margin:8px 0 0 auto;
+  border:1px solid #777;
+  background:white;
+  border-radius:6px;
+  color:#555;
+  padding:7px 11px;
+  font-size:11px}
+.vacio{
+  text-align:center;
+  padding:54px 14px;
+  color:#6d7682}
+.vacio h3 {
+  color:#0d254b
+}
+.vacio p{
+  font-size:13px;
+  line-height:1.6}
+.vacio a{
+  display:inline-block;
+  background:#3e28ff;
+  color:white;
+  padding:11px 20px;
+  border-radius:8px;
+  text-decoration:none;
+  margin-top:15px}

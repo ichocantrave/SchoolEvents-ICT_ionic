@@ -1,0 +1,46 @@
+.pagina-blanca{
+  --background:#fff
+}
+.interior{
+  padding:25px 20px
+}
+.interior h1{
+  font-size:20px
+}
+.galeria{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:12px
+}
+.galeria figure{
+  margin:0;
+  border:1px solid #ddd;
+  border-radius:8px;
+  overflow:hidden
+}
+.galeria img{
+  width:100%;
+  height:145px;
+  object-fit:cover
+}
+.galeria figcaption{
+  padding:8px;
+  font-size:12px
+}
+.vacio{
+  text-align:center;
+  padding:60px 0;
+  color:#777
+}
+.vacio p {
+  font-size:14px
+}
+.vacio a{
+  display:inline-block;
+  background:#3e28ff;
+  color:white;
+  text-decoration:none;
+  padding:11px;
+  border-radius:8px;
+  margin-top:10px
+}

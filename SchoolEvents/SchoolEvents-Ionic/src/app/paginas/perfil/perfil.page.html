@@ -1,0 +1,43 @@
+<app-cabecera titulo="Mi perfil"></app-cabecera>
+<ion-content class="pagina-blanca">
+    <div class="interior">
+  <section class="ficha">
+      <img src="assets/schoolevents/avatar.png" alt="Foto de Choquito">
+      <h1>Choquito Flores Navas</h1>
+      <p>Parte del alumnado</p>
+  </section>
+  <section class="estadisticas">
+      <div>
+          <strong>6</strong>
+          <span>asistidos</span>
+      </div>
+      <div>
+          <strong>{{fotos.fotos().length}}</strong>
+          <span>Fotos compartidas</span>
+      </div>
+      <div>
+          <strong>{{eventos.inscritos().length}}</strong>
+          <span>Inscripciones activas</span>
+      </div>
+  </section>
+  <section class="ajuste-tema">
+    <div class="ajuste-tema__texto">
+      <strong>Modo oscuro</strong>
+      <span>Activa una apariencia oscura en toda la aplicación</span>
+    </div>
+    <ion-toggle
+      [checked]="tema.modoOscuro()"
+      (ionChange)="tema.cambiarModo($event.detail.checked)"
+      aria-label="Activar modo oscuro">
+    </ion-toggle>
+  </section>
+  <nav class="opciones" aria-label="Opciones del perfil">
+    <a routerLink="/app/inscripciones"><ion-icon name="checkbox-outline"></ion-icon>Mis inscripciones<ion-icon name="chevron-forward-outline"></ion-icon></a>
+    <a routerLink="/mis-fotos"><ion-icon name="images-outline"></ion-icon>Mis fotos<ion-icon name="chevron-forward-outline"></ion-icon></a>
+    <a routerLink="/app/favoritos"><ion-icon name="heart-outline"></ion-icon>Mis favoritos<ion-icon name="chevron-forward-outline"></ion-icon></a>
+    <a routerLink="/configuracion"><ion-icon name="settings-outline"></ion-icon>Configuración<ion-icon name="chevron-forward-outline"></ion-icon></a>
+    <a routerLink="/ayuda"><ion-icon name="help-circle-outline"></ion-icon>Ayuda<ion-icon name="chevron-forward-outline"></ion-icon></a>
+    <a routerLink="/login"><ion-icon name="log-out-outline"></ion-icon>Cerrar sesión<ion-icon name="chevron-forward-outline"></ion-icon></a>
+  </nav>
+</div>
+</ion-content>

@@ -1,0 +1,79 @@
+.pagina-blanca{
+  --background:#fff
+}
+.bienvenida{
+  display:flex;
+  align-items:center;
+  gap:7px;
+  padding:12px 23px 0;
+  min-height:64px
+}
+.bienvenida img{
+  width:46px;
+  height:46px;
+  border-radius:50%;
+  object-fit:cover
+}
+.bienvenida h1{
+  font-size:14px;
+  color:#000;
+  font-weight:700;
+  margin:0 0 3px
+}
+.bienvenida p{
+  font-size:11px;
+  color:#000;
+  margin:0}
+.categorias{
+  display:flex;
+  justify-content:space-between;
+  gap:5px;
+  padding:20px 20px 0}
+.categoria{
+  display:flex;
+  align-items:center;
+  flex-direction:column;
+  text-decoration:none;
+  color:#111;
+  gap:4px;
+  min-width:0;
+  font-size:11px;
+  text-align:center}
+.categoria img{
+  width:50px;
+  height:50px;
+  object-fit:contain;
+  border-radius:6px}
+.categoria span{
+  white-space:nowrap
+}
+.seccion-eventos{
+  padding:39px 20px 24px
+}
+.encabezado{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  margin-bottom:18px}
+.encabezado h2{
+  font-size:11px;
+  color:#111;
+  font-weight:700;
+  margin:0}
+.encabezado a{
+  font-size:10px;
+  color:#012686;
+  text-decoration:none}
+.lista-eventos{
+  display:grid;
+  gap:31px
+}@media(max-width:370px){
+  .categorias{
+    padding-inline:12px
+  }
+  .categoria img{
+    width:43px;height:43px
+  }
+  .seccion-eventos{
+    padding-inline:14px}
+}

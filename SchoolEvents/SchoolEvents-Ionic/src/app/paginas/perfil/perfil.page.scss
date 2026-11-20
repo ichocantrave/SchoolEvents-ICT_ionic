@@ -1,0 +1,103 @@
+.pagina-blanca{
+  --background:#fff
+}
+.interior{
+  padding:24px 24px 30px
+}
+.ficha{
+  text-align:center;
+  padding:14px 0 22px
+}
+.ficha img{
+  width:100px;
+  height:100px;
+  border-radius:50%;
+  object-fit:cover
+}
+.ficha h1{
+  font-size:20px;
+  margin:14px 0 6px
+}
+.ficha p{
+  font-size:13px;
+  color:#858585;
+  margin:0
+}
+.estadisticas{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  text-align:center;
+  gap:8px;
+  padding:20px 0;
+  border-top:1px solid #ddd;
+  border-bottom:1px solid #ddd
+}
+.estadisticas div{
+  display:flex;
+  flex-direction:column;
+  gap:8px
+}
+.estadisticas strong{
+  font-size:24px;
+  color:#102c77
+}
+.estadisticas span{
+  font-size:11px;
+  color:#747474
+}
+.opciones{
+  display:grid;
+  margin-top:22px
+}
+.opciones a{
+  display:flex;
+  align-items:center;
+  gap:13px;
+  padding:18px 6px;
+  border-bottom:1px solid #e5e5e5;
+  text-decoration:none;
+  color:#232d3f;
+  font-size:14px
+}.opciones a ion-icon:first-child{
+   font-size:23px;
+   color:#0735a2
+ }
+.opciones a ion-icon:last-child{
+  margin-left:auto;
+  color:#89909c;
+  font-size:18px
+}
+
+
+.ajuste-tema{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:16px;
+  margin-top:22px;
+  padding:15px;
+  border:1px solid #e5e9f0;
+  border-radius:12px;
+  background:#f7f9fc
+}
+.ajuste-tema__texto{
+  display:flex;
+  flex-direction:column;
+  gap:5px
+}
+.ajuste-tema__texto strong{
+  font-size:14px;
+  color:#232d3f
+}
+.ajuste-tema__texto span{
+  font-size:11px;
+  line-height:1.4;
+  color:#747d8c
+}
+.ajuste-tema ion-toggle{
+  flex-shrink:0;
+  --track-background:#cbd5e1;
+  --track-background-checked:#3e28ff;
+  --handle-background:#fff;
+  --handle-background-checked:#fff
+}

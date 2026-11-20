@@ -1,0 +1,18 @@
+<article class="evento-card">
+  <a [routerLink]="['/app/evento', evento.id]" class="enlace-imagen">
+    <img [src]="evento.imagen" [alt]="evento.titulo">
+  </a>
+  <div class="info">
+    <a class="nombre" [routerLink]="['/app/evento', evento.id]">{{ evento.titulo }}</a>
+    <div class="etiquetas">
+      <span>{{ nombreCategoria(evento.categoria) }}</span>
+      <span>{{ evento.precio > 0 ? 'De pago (' + evento.precio + ' €)' : 'Gratuito' }}</span>
+    </div>
+    <p><ion-icon name="calendar-outline"></ion-icon>{{ fechaBonita(evento.fecha) }}</p>
+    <p><ion-icon name="time-outline"></ion-icon>{{ evento.hora }}</p>
+    <p><ion-icon name="location-outline"></ion-icon>{{ evento.lugar }}</p>
+    <a class="interesa" [routerLink]="evento.precio > 0 ? ['/pago', evento.id] : ['/app/evento', evento.id]">
+      {{ evento.precio > 0 ? 'Suscribirse' : 'Me interesa' }}
+    </a>
+  </div>
+</article>

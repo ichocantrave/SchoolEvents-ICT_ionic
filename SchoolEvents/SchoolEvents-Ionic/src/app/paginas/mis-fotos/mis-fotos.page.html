@@ -1,0 +1,20 @@
+<app-cabecera titulo="Mis fotos"></app-cabecera><ion-content class="pagina-blanca">
+    <div class="interior">
+        <h1>Mis fotos</h1>
+@if(fotos.fotos().length){
+    <div class="galeria">
+        @for(foto of fotos.fotos();
+            track $index){
+        <figure>
+            <img [src]="foto.url" [alt]="foto.nombre">
+            <figcaption>{{eventos.obtener(foto.eventoId)?.titulo}}</figcaption>
+        </figure>
+        }
+    </div>
+}@else{
+    <div class="vacio">
+        <p>No has compartido fotografías todavía.</p>
+        <a routerLink="/app/eventos">Buscar un evento</a>
+    </div>
+}
+</div></ion-content>

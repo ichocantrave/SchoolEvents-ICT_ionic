@@ -1,0 +1,25 @@
+<app-cabecera titulo="Subir fotos"></app-cabecera>
+<ion-content class="pagina-blanca">
+    <div class="interior">
+        <h1>Sube tus fotos del evento</h1>
+        <p>{{evento?.titulo}}</p>
+<label class="zona-subida">
+    <ion-icon name="cloud-upload-outline"></ion-icon>
+    <strong>Haz clic para subir las fotos del evento</strong>
+    <small>JPG, PNG o WEBP, máximo 3 MB</small>
+    <input type="file" accept="image/*" (change)="seleccionar($event)" />
+</label>
+@if(previsualizacion){
+    <img class="preview" [src]="previsualizacion" alt="Vista previa de la foto seleccionada">}
+<p>Las fotos que subas se quedan guardadas en tu perfil durante esta sesión de demostración.</p>
+<label class="consentimiento">
+    <input type="checkbox" [checked]="acepto" (change)="acepto=$any($event.target).checked" />
+    Acepto compartir esta fotografía en la aplicación.
+</label>
+@if(error){
+    <p class="error" role="alert">{{error}}</p>
+}
+<button class="principal" type="button" (click)="guardar()">Guardar foto</button>
+<a routerLink="/app/inicio" class="cancelar">Volver al inicio</a>
+</div>
+</ion-content>

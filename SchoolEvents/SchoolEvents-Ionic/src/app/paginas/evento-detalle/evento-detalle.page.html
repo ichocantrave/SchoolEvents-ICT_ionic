@@ -1,0 +1,38 @@
+<app-cabecera titulo="Detalle del evento"></app-cabecera>
+<ion-content class="pagina-blanca"><div class="interior">
+@if(evento; as e) {
+  <img class="portada" [src]="e.imagen" [alt]="e.titulo">
+  <div class="titular">
+    <h1>{{e.titulo}}</h1>
+    <button class="corazon" [attr.aria-label]="servicio.esFavorito(e.id) ? 'Quitar de favoritos' : 'Añadir a favoritos'"
+      (click)="servicio.cambiarFavorito(e.id)">
+      <ion-icon [name]="servicio.esFavorito(e.id) ? 'heart' : 'heart-outline'"></ion-icon>
+    </button>
+  </div>
+  <div class="etiquetas">
+    <span class="categoria">{{nombreCategoria(e.categoria)}}</span>
+    <span>{{e.precio > 0 ? 'De pago (' + e.precio + ' €)' : 'Gratuito'}}</span>
+  </div>
+  <div class="metadatos">
+    <p><ion-icon name="calendar-outline"></ion-icon>{{fechaBonita(e.fecha)}}</p>
+    <p><ion-icon name="time-outline"></ion-icon>{{e.hora}}</p>
+    <p><ion-icon name="location-outline"></ion-icon>{{e.lugar}}</p>
+  </div>
+  <h2>Información del evento</h2>
+  <p class="descripcion">{{e.descripcion}}</p>
+  @if(e.id === 6) {
+    <h2>Requisitos</h2>
+    <ul><li>Avisar al tutor escolar</li><li>Traer bonobús o dinero para el transporte</li><li>Pagar con antelación</li></ul>
+  }
+  <div class="acciones">
+    @if(servicio.estaInscrito(e.id)) {
+      <button class="principal" (click)="quitar(e.id)">Cancelar inscripción</button>
+    } @else if(e.precio > 0) {
+      <button class="principal" (click)="abrirPago(e.id)">Suscribirse</button>
+    } @else {
+      <button class="principal" (click)="inscribirme(e.id)">Me interesa</button>
+    }
+    <a [routerLink]="['/subir-fotos', e.id]" class="secundario"><ion-icon name="camera-outline"></ion-icon> Fotos del evento</a>
+  </div>
+} @else { <p>Este evento no existe. <a routerLink="/app/eventos">Ver eventos</a></p> }
+</div></ion-content>

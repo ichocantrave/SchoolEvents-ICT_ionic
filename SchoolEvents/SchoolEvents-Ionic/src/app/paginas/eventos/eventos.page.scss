@@ -1,0 +1,33 @@
+.pagina-blanca{
+  --background:#fff
+}
+.interior{
+  padding:23px 20px 30px
+}
+.interior h1{
+  font-size:17px;
+  color:#0b1934;
+  margin:4px 0 22px
+}
+.interior h2{
+  font-size:13px;
+  margin:0 0 18px
+}
+.lista-eventos{
+  display:grid;
+  gap:20px
+}
+.categoria-titulo{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  margin-bottom:18px
+}
+.categoria-titulo img{
+  width:48px;
+  height:48px;
+  object-fit:contain
+}
+.categoria-titulo h1{
+  margin:0
+}

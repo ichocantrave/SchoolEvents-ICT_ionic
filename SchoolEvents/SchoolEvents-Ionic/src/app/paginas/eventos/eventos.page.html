@@ -1,0 +1,16 @@
+<app-cabecera [titulo]="categoria === 'todos' ? 'Todos los eventos' : nombre"></app-cabecera>
+<ion-content class="pagina-blanca">
+  <div class="interior">
+    @if(categoria === 'todos') {
+      <h1>Todos los eventos curso 26/27</h1>
+    } @else {
+      <div class="categoria-titulo"><img [src]="imagenCategoria" [alt]="nombre"><h1>{{ nombre }}</h1></div>
+      <h2>Próximos eventos</h2>
+    }
+    <div class="lista-eventos">
+      @for(evento of eventos; track evento.id) {
+        <app-tarjeta-evento [evento]="evento"></app-tarjeta-evento>
+      } @empty { <p>No hay eventos en esta categoría.</p> }
+    </div>
+  </div>
+</ion-content>

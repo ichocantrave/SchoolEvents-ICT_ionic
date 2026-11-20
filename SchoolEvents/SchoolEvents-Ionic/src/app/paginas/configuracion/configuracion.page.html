@@ -1,0 +1,13 @@
+<app-cabecera titulo="Configuración">
+</app-cabecera>
+<ion-content class="pagina-blanca">
+    <main class="interior">
+        <h1>Configuración</h1>
+        <label class="opcion">
+            <span>Recibir notificaciones de los eventos</span>
+            <input type="checkbox" [checked]="notificaciones" (change)="notificaciones=$any($event.target).checked" />
+        </label>
+        <button class="principal" (click)="guardar()">Guardar preferencias</button>
+        @if(mensajito){<p>{{mensajito}}</p>}
+    </main>
+</ion-content>

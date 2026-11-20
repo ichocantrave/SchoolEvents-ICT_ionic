@@ -1,0 +1,31 @@
+.pagina-blanca{
+  --background:#fff
+}
+.centro{
+  min-height:100%;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding:25px
+}
+.centro img{
+  width:135px;
+  height:auto
+}
+.centro h1{
+  font-size:22px
+}
+.centro p{
+  font-size:13px;
+  color:#777
+}
+.centro a{
+  background:#3e28ff;
+  color:#fff;
+  text-decoration:none;
+  border-radius:8px;
+  padding:12px 24px;
+  margin-top:15px
+}

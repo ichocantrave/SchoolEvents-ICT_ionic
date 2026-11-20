@@ -1,0 +1,105 @@
+.pagina-blanca{
+  --background:#fff}
+.interior{
+  padding:23px 22px}
+.interior h1{
+  font-size:21px;
+  margin:0 0 22px}
+.caja-calendario{
+  border:1px solid #e4e5ee;
+  padding:15px;
+  border-radius:12px;
+  box-shadow:0 2px 9px #0001}
+.mes{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:24px}
+.mes h2{
+  font-size:18px;
+  margin:0;
+  text-transform:capitalize}
+.mes button{
+  border:0;
+  background:#eeeefe;
+  color:#3e28ff;
+  font-size:24px;
+  border-radius:50%;
+  width:36px;
+  height:36px;
+  display:grid;
+  place-items:center}
+.cuadricula{
+  display:grid;
+  grid-template-columns:repeat(7,1fr);
+  gap:7px;
+  text-align:center;
+  align-items:center}
+.dia-semana{
+  color:#69758e;
+  font-size:12px;
+  font-weight:700}
+.cuadricula button{
+  aspect-ratio:1;
+  border:0;
+  background:transparent;
+  border-radius:50%;
+  font-size:13px;
+  color:#222;
+  position:relative}
+.cuadricula button.con-evento:not(.seleccionado):after{
+  content:'';
+  position:absolute;
+  width:5px;
+  height:5px;
+  border-radius:50%;
+  background:#3e28ff;
+  bottom:3px;
+  left:calc(50% - 2px)}
+.cuadricula button.seleccionado{
+  background:#3e28ff;
+  color:white}
+.titulo-dia{
+  font-size:16px;
+  margin:27px 0 17px;
+  text-transform:capitalize}
+.evento-dia{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  color:#111;
+  text-decoration:none;
+  border:1px solid #ddd;
+  padding:8px;
+  border-radius:8px;
+  margin-bottom:12px}
+.evento-dia img{
+  width:61px;
+  height:58px;
+  object-fit:cover;
+  border-radius:6px}
+.evento-dia span{
+  flex:1}
+.evento-dia strong,.evento-dia small{
+  display:block}
+.evento-dia strong{
+  font-size:13px}
+.evento-dia small{
+  color:#929292;
+  font-size:11px;
+  margin-top:6px}
+.vacio{
+  font-size:13px
+;color:#7a7a7a}
+.leyenda{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  font-size:11px;
+  color:#727272;
+  margin-top:24px}
+.leyenda span{
+  width:8px;
+  height:8px;
+  background:#3e28ff;
+  border-radius:50%}

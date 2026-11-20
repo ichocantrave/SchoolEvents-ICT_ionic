@@ -1,0 +1,40 @@
+<!--Este html me ha ayudado chatgpt en algunas cosas pero simplemente como herramienta para corregir mis fallos de código-->
+<ion-content class="pantalla-pago">
+  <div class="franja"></div>
+  <main class="panel">
+    @if(paso === 1) {
+      <button class="cerrar" [routerLink]="['/app/evento', evento?.id]" aria-label="Cerrar">×</button>
+      <h1>Elija su método de pago:</h1>
+      <p>La cantidad a pagar está indicada en la página del evento.</p>
+      <p class="importe">{{evento?.titulo}} · {{evento?.precio}} €</p>
+      <div class="metodos">
+        @for(metodoPago of ['Visa', 'Mastercard', 'Apple Pay', 'PayPal']; track metodoPago) {
+          <button (click)="seleccionar(metodoPago)">{{metodoPago}}</button>
+        }
+      </div>
+      <p class="aviso">Prototipo de demostración. No se procesan pagos reales ni se recopilan datos bancarios. No introduzcas datos de tarjetas auténticas.</p>
+    } @else if(paso === 2) {
+      <button class="cerrar" (click)="paso = 1" aria-label="Volver">×</button>
+      <h1>Datos del pago</h1>
+      <p>Completa los datos para simular la compra de forma segura.</p>
+      <p class="seleccionado">Forma de pago seleccionada: <strong>{{metodo}}</strong></p>
+      @if(metodo === 'Visa' || metodo === 'Mastercard') {
+        <label>Número de tarjeta<input [(ngModel)]="numero" inputmode="numeric" placeholder="1234 5678 9012 3456" autocomplete="off"></label>
+        <div class="dos-campos">
+          <label>Fecha de caducidad<input [(ngModel)]="caducidad" placeholder="MM / AA" autocomplete="off"></label>
+          <label>CVV<input [(ngModel)]="cvv" inputmode="numeric" placeholder="123" type="password" autocomplete="off"></label>
+        </div>
+        <label>Nombre del titular<input [(ngModel)]="titular" placeholder="Como aparece en la tarjeta" autocomplete="off"></label>
+      } @else {
+        <p class="aviso">En esta maqueta, el pago con {{metodo}} se confirma sin conectar con ningún proveedor.</p>
+      }
+      @if(error) { <p class="error" role="alert">{{error}}</p> }
+      <button class="principal" (click)="pagar()">♙ Confirmar pago simulado</button>
+      <p class="aviso">Tus datos no se transmiten ni se almacenan. Esta pantalla es una demostración.</p>
+    } @else {
+      <div class="exito"><div class="check">✓</div><h1>¡Listo!</h1><p>El pago se ha realizado con éxito (simulación).</p>
+        <button class="principal" (click)="volver()">Volver al inicio</button>
+      </div>
+    }
+  </main>
+</ion-content>

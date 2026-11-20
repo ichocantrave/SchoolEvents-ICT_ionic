@@ -1,0 +1,26 @@
+<app-cabecera titulo="Mis inscripciones"></app-cabecera>
+<ion-content class="pagina-blanca">
+    <div class="interior">
+        <div class="perfil-mini">
+            <img src="assets/schoolevents/avatar.png" alt="Choquito">
+            <div>
+                <h1>Choquito Flores Navas</h1>
+                <p>Parte del alumnado</p>
+            </div>
+        </div>
+        <h2>Mis inscripciones</h2>
+@if(eventos.length){
+    <div class="lista">@for(evento of eventos;track evento.id){
+        <div><app-tarjeta-evento [evento]="evento"></app-tarjeta-evento>
+            <button class="cancelar" (click)="cancelar(evento.id)">Cancelar inscripción</button>
+        </div>
+    }
+    </div>}
+@else{
+    <div class="vacio">
+        <h3>Aún no tienes inscripciones</h3>
+        <p>Entra en un evento y pulsa «Me interesa» o «Suscribirse» para añadirlo aquí.</p>
+        <a routerLink="/app/eventos">Ver eventos</a>
+    </div>
+}
+</div></ion-content>

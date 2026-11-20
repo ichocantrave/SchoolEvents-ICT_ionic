@@ -1,0 +1,46 @@
+.pagina-blanca{
+  --background:#fff
+}
+.interior{
+  padding:25px 20px
+}
+.interior h1{
+  font-size:20px;
+  margin:0 0 19px
+}
+.notificacion{
+  display:flex;
+  align-items:center;
+  gap:14px;
+  padding:17px 12px;
+  border:1px solid #e5e7ee;
+  border-radius:10px;
+  margin-bottom:13px;
+  color:#111;
+  text-decoration:none
+}
+.notificacion>ion-icon:first-child{
+  font-size:25px;
+  color:#3132c6
+}
+.notificacion>ion-icon:last-child{
+  margin-left:auto;
+  color:#8d92a2
+}
+.notificacion>span{
+  display:grid;
+  gap:5px;
+  flex:1
+}
+.notificacion strong{
+  font-size:14px
+}
+.notificacion span span{
+  font-size:12px;
+  color:#666;
+  line-height:1.4
+}
+.notificacion small{
+  font-size:11px;
+  color:#969696
+}

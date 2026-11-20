@@ -1,0 +1,305 @@
+@import '@ionic/angular/css/core.css';
+@import '@ionic/angular/css/normalize.css';
+@import '@ionic/angular/css/structure.css';
+@import '@ionic/angular/css/typography.css';
+@import '@ionic/angular/css/display.css';
+@import '@ionic/angular/css/padding.css';
+@import '@ionic/angular/css/flex-utils.css';
+
+/*Para realizar esto he necesitado ayuda de webs y de la herramienta Chatgpt porque
+me ha costado días buscar combinación de colores y algunas partes del código que no me salian*/
+:root {
+  font-family: Inter, Arial, Helvetica, sans-serif;
+  color-scheme: light;
+}
+body {
+  background: #fff;
+}
+io-content {
+  --color: #111;
+}
+ion-toolbar {
+  --border-width: 0;
+}
+button, a, input {
+  font-family: inherit;
+}
+button {
+  cursor: pointer;
+}
+
+:root.modo-oscuro {
+  color-scheme: dark;
+
+  --app-fondo: #263442;
+  --app-superficie: #303f4e;
+  --app-superficie-2: #3b4b5b;
+  --app-texto: #D2E2F1FF;
+  --app-texto-secundario: #D2E2F1FF;
+  --app-borde: #526273;
+  --app-acento: #b7c2ff;
+  --app-boton: #6558e8;
+  --ion-background-color: var(--app-fondo);
+  --ion-text-color: var(--app-texto);
+  --ion-item-background: var(--app-superficie);
+  --ion-card-background: var(--app-superficie);
+  --ion-toolbar-background: #2d3b49;
+  --ion-tab-bar-background: #2d3b49;
+}
+/*Nackground y navegacion*/
+html.modo-oscuro,
+html.modo-oscuro body,
+html.modo-oscuro ion-app {
+  background: var(--app-fondo);
+  color: var(--app-texto);
+}
+html.modo-oscuro ion-content {
+  --background: var(--app-fondo) !important;
+  --color: var(--app-texto);
+}
+html.modo-oscuro ion-toolbar {
+  --background: #2d3b49 !important;
+  --color: var(--app-texto);
+}
+html.modo-oscuro ion-title {
+  color: var(--app-texto) !important;
+}
+html.modo-oscuro ion-tab-bar {
+  --background: #2d3b49 !important;
+  --border: 1px solid var(--app-borde);
+  --color: var(--app-texto-secundario);
+  --color-selected: var(--app-acento);
+}
+html.modo-oscuro ion-tab-button {
+  --color: var(--app-texto-secundario);
+  --color-selected: var(--app-acento);
+}
+/*general text*/
+html.modo-oscuro ion-content :is(
+  h1, h2, h3, h4, p, span, strong,
+  label, li, a, ion-label
+) {
+  color: var(--app-texto);
+}
+html.modo-oscuro ion-content :is(
+  .interior p,
+  .metadatos,
+  .descripcion,
+  .leyenda,
+  .dia-semana,
+  .notificacion small,
+  .notificacion span span,
+  .perfil-mini p,
+  .ajuste-tema__texto span,
+  .evento-dia small,
+  .info p,
+  .consentimiento
+) {
+  color: var(--app-texto-secundario);
+}
+html.modo-oscuro .titulo-pantalla {
+  color: var(--app-texto) !important;
+}
+/* tarjets y panel*/
+html.modo-oscuro :is(
+  .evento-card,
+  .caja-calendario,
+  .evento-dia,
+  .notificacion,
+  .perfil-mini,
+  .galeria figure,
+  .panel,
+  .tarjeta,
+  .campo,
+  .zona-subida,
+  .ajuste-tema
+) {
+  background: var(--app-superficie) !important;
+  color: var(--app-texto);
+  border-color: var(--app-borde);
+  box-shadow: none;
+}
+/* tearjet event */
+html.modo-oscuro .evento-card .nombre {
+  color: var(--app-texto) !important;
+}
+html.modo-oscuro .evento-card .info p {
+  color: var(--app-texto-secundario) !important;
+}
+html.modo-oscuro .evento-card .etiquetas span {
+  background: #46566a;
+  color: #e5eaff;
+}
+html.modo-oscuro .evento-card .etiquetas span:last-child {
+  background: var(--app-superficie-2);
+  color: var(--app-texto-secundario);
+}
+/*Ini y cat*/
+html.modo-oscuro :is(
+  .bienvenida h1,
+  .bienvenida p,
+  .categoria,
+  .categoria span,
+  .encabezado h2
+) {
+  color: var(--app-texto) !important;
+}
+/* calendar */
+html.modo-oscuro :is(
+  .dia-semana,
+  .titulo-dia
+) {
+  color: var(--app-texto) !important;
+}
+html.modo-oscuro .mes button {
+  background: var(--app-superficie-2);
+  color: var(--app-acento);
+}
+html.modo-oscuro .cuadricula button:not(.seleccionado) {
+  background: transparent;
+  color: var(--app-texto) !important;
+}
+html.modo-oscuro .cuadricula button.seleccionado {
+  background: var(--app-boton);
+  color: #fff !important;
+}
+html.modo-oscuro .cuadricula button.con-evento:not(.seleccionado)::after,
+html.modo-oscuro .leyenda span {
+  background: var(--app-acento);
+}
+html.modo-oscuro .evento-dia strong {
+  color: var(--app-texto);
+}
+/* perfil y estadis*/
+html.modo-oscuro :is(
+  .ficha h1,
+  .ficha p,
+  .perfil-mini h1,
+  .perfil-mini p,
+  .estadisticas strong,
+  .estadisticas span,
+  .ajuste-tema__texto strong,
+  .ajuste-tema__texto span
+) {
+  color: var(--app-texto) !important;
+}
+html.modo-oscuro .estadisticas {
+  border-color: var(--app-borde);
+}
+html.modo-oscuro .opciones a {
+  color: var(--app-texto) !important;
+  border-color: var(--app-borde);
+}
+html.modo-oscuro .opciones a ion-icon {
+  color: var(--app-acento) !important;
+}
+html.modo-oscuro .volver,
+html.modo-oscuro .avisos {
+  color: var(--app-acento);
+}
+html.modo-oscuro .corazon,
+html.modo-oscuro .encabezado a,
+html.modo-oscuro .pago-demo,
+html.modo-oscuro .enlace-olvido {
+  color: var(--app-acento);
+}
+/* inscrip y list varias */
+html.modo-oscuro :is(
+  .vacio h3,
+  .vacio p
+) {
+  color: var(--app-texto) !important;
+}
+html.modo-oscuro .evento-dia {
+  border-color: var(--app-borde);
+}
+/* campos y forms*/
+html.modo-oscuro ion-content :is(
+  input, textarea, select
+),
+html.modo-oscuro .campo input,
+html.modo-oscuro .panel input {
+  background: #263442;
+  color: var(--app-texto);
+  border-color: var(--app-borde);
+}
+html.modo-oscuro ion-content :is(
+  input, textarea
+)::placeholder,
+html.modo-oscuro .campo input::placeholder {
+  color: #b7c2ce;
+  opacity: 1;
+}
+/*botons */
+html.modo-oscuro :is(
+  .cancelar,
+  .metodos button
+) {
+  background: var(--app-superficie-2);
+  color: var(--app-texto);
+  border-color: var(--app-borde);
+  box-shadow: none;
+}
+html.modo-oscuro :is(
+  .principal,
+  .boton-entrar,
+  .interesa,
+  .vacio a,
+  .centro a,
+  .panel button
+) {
+  background: var(--app-boton);
+  color: #fff;
+}
+html.modo-oscuro :is(
+  .secundario,
+  .acciones .secundario
+) {
+  background: var(--app-superficie-2);
+  color: var(--app-acento);
+}
+/* pagao*/
+html.modo-oscuro .panel :is(
+  .importe, h1, p, label, .aviso
+) {
+  color: var(--app-texto) !important;
+}
+/* login*/
+html.modo-oscuro ion-content.school-login,
+html.modo-oscuro ion-content.fondo,
+html.modo-oscuro ion-content.pantalla-pago {
+  --background: var(--app-fondo) !important;
+}
+html.modo-oscuro .login-layout {
+  background: linear-gradient(
+          180deg,
+          #354657,
+          #263442
+  );
+}
+html.modo-oscuro :is(
+  .identidad,
+  .identidad__nombre,
+  .tarjeta h1,
+  .aviso,
+  .panel h1,
+  .panel p,
+  .panel label,
+  .campo,
+  .campo__etiqueta,
+  .separador
+) {
+  color: var(--app-texto);
+}
+html.modo-oscuro .boton-escolar {
+  border-color: var(--app-acento);
+  color: var(--app-acento);
+}
+html.modo-oscuro .separador::before,
+html.modo-oscuro .separador::after {
+  background: var(--app-borde);
+}
+html.modo-oscuro .error {
+  color: #ff9b9b !important;
+}
+

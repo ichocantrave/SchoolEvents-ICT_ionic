@@ -1,0 +1,31 @@
+<app-cabecera titulo="Calendario"></app-cabecera>
+<ion-content class="pagina-blanca"><div class="interior">
+  <h1>Calendario</h1>
+  <section class="caja-calendario">
+    <div class="mes"><button (click)="moverMes(-1)" aria-label="Mes anterior">
+        <ion-icon name="chevron-back-outline">
+        </ion-icon>
+    </button>
+        <h2>{{nombreMes}}</h2>
+        <button (click)="moverMes(1)" aria-label="Mes siguiente"><ion-icon name="chevron-forward-outline">
+        </ion-icon>
+        </button>
+    </div>
+    <div class="cuadricula">@for(dia of semana;track $index){<span class="dia-semana">{{dia}}</span>} <!--Track indez es pa identi each elemen x su posci en la list-->
+        <!--bucle recorre lista celdas (have día y pocis vacia--><!--Si día no esta vacion, show botn dia-->
+        @for(dia of celdas;track $index){@if(dia !== null)
+      {<button type="button" [class.seleccionado]="dia===diaSeleccionado" [class.con-evento]="tieneEvento(dia)" (click)="diaSeleccionado=dia">{{dia}}
+      </button>} @else{<span>
+      </span>}}
+    </div>
+  </section>
+  <h2 class="titulo-dia">Eventos del {{diaSeleccionado}} de {{nombreMes}}</h2>
+  @for(evento of eventosDelDia;track evento.id){<a class="evento-dia" [routerLink]="['/app/evento',evento.id]">
+      <img [src]="evento.imagen" [alt]="evento.titulo"><span>
+      <strong>{{evento.titulo}}</strong>
+      <small>{{evento.hora}} · {{evento.lugar}}</small>
+  </span><ion-icon name="chevron-forward-outline"></ion-icon></a>}@empty{<p class="vacio">No hay eventos programados para este día.</p>}
+    <!--el nombre de chevron es del iconito de la fecha-->
+  <p class="leyenda"><span>
+  </span> Día con evento</p>
+</div></ion-content>

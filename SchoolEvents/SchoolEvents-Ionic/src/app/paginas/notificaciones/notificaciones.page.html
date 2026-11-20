@@ -1,0 +1,16 @@
+<app-cabecera titulo="Notificaciones">
+</app-cabecera>
+<ion-content class="pagina-blanca">
+    <div class="interior">
+        <h1>Notificaciones</h1>
+@for(n of notificaciones;track n.id){
+    <a class="notificacion" [routerLink]="n.ruta">
+        <ion-icon [name]="n.icono"></ion-icon>
+        <span>
+            <strong>{{n.titulo}}</strong>
+            <span>{{n.mensaje}}</span>
+            <small>{{n.hace}}</small>
+        </span><ion-icon name="chevron-forward-outline"></ion-icon>
+    </a>}
+</div>
+</ion-content>

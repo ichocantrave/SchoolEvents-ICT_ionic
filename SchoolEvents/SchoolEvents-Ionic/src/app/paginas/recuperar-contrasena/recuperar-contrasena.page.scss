@@ -1,0 +1,51 @@
+.fondo{
+  --background:#c6eaf5
+}
+.panel{
+  margin:70px auto;
+  padding:30px 22px;
+  background:#bce1ff;
+  border-radius:12px;
+  width:min(90%,390px);
+  text-align:center
+}
+.panel img{
+  width:115px;
+  height:85px;
+  object-fit:contain
+}
+.panel h1{
+  color:#0d2784;
+  font-size:22px
+}
+.panel p{
+  font-size:14px;
+  color:#334
+}
+.panel a{
+  display:block;
+  margin:16px auto;
+  color:#3525d9
+}
+.panel label{
+  display:block;
+  font-size:12px;
+  text-align:left;
+  margin:20px 0
+}
+.panel input{
+  display:block;
+  width:100%;
+  padding:13px;
+  border:1px solid #aaa;
+  border-radius:5px;
+  margin-top:6px
+}
+.panel button{
+  width:100%;
+  border:0;
+  background:#3e28ff;
+  color:#fff;
+  padding:15px;
+  border-radius:8px
+}

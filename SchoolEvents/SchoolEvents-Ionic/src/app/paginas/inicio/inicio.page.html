@@ -1,0 +1,28 @@
+<app-cabecera></app-cabecera>
+<ion-content class="pagina-blanca">
+  <section class="bienvenida">
+      <img src="assets/schoolevents/avatar.png" alt="Mascota Choquito">
+      <div>
+          <h1>¡Bienvenido, Choquito!</h1>
+          <p>Aquí tienes tus próximos eventos</p>
+      </div>
+  </section>
+  <nav class="categorias" aria-label="Categorías de eventos">
+    @for(categoria of categorias; track categoria.id) {
+      <a class="categoria" [routerLink]="['/app/eventos']" [queryParams]="categoria.id === 'todos' ? {} : {categoria:categoria.id}">
+        <img [src]="categoria.imagen" [alt]="categoria.nombre">
+          <span>{{categoria.nombre}}</span>
+      </a>
+    }
+  </nav>
+  <section class="seccion-eventos">
+      <div class="encabezado">
+          <h2>Próximos eventos</h2>
+          <a routerLink="/app/eventos">Ver todos</a>
+      </div>
+    <div class="lista-eventos">@for(evento of eventos; track evento.id){
+        <app-tarjeta-evento [evento]="evento"></app-tarjeta-evento>
+    }
+    </div>
+  </section>
+</ion-content>

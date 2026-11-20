@@ -1,0 +1,25 @@
+.pagina-blanca{
+  --background:#fff}
+.interior{
+  padding:25px}
+.interior h1{
+  font-size:20px}
+.opcion{
+  display:flex;
+  justify-content:space-between;
+  gap:20px;
+  padding:24px 0;
+  font-size:14px;
+  border-bottom:1px solid #ddd}
+.opcion input{
+  accent-color:#3e28ff}
+.principal{
+  border:0;
+  color:#fff;
+  background:#3e28ff;
+  border-radius:7px;
+  padding:12px;
+  margin-top:25px}
+.interior p{
+  color:#555;
+  font-size:13px}

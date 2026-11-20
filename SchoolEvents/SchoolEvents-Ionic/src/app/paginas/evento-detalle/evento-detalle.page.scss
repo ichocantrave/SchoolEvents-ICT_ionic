@@ -1,0 +1,69 @@
+.pagina-blanca{
+  --background:#fff}
+.interior{
+  padding:18px 22px 32px}
+.portada{
+  width:100%;
+  height:225px;
+  object-fit:cover;
+  border-radius:10px;
+  background:#e8f0ff}
+.titular{
+  display:flex;
+  align-items:center;
+  gap:15px;
+  margin-top:12px}
+.titular h1{
+  font-size:22px;
+  color:#122d54;
+  margin:0;
+  flex:1}
+.corazon{
+  border:0;
+  background:transparent;
+  color:#3e28ff;
+  font-size:28px;
+  padding:8px}
+.metadatos{
+  color:#6f7886;
+  margin:19px 0 25px}
+.metadatos p{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  margin:11px 0;
+  font-size:14px}
+.metadatos ion-icon{
+  font-size:18px}
+.interior h2{font-size:17px;
+  margin:20px 0 12px}
+.descripcion{
+  color:#555;
+  line-height:1.55;
+  font-size:14px}
+.acciones{display:grid;
+  gap:10px;
+  margin:25px 0}
+.acciones .principal,.acciones .secundario{
+  border:0;
+  background:#3e28ff;
+  border-radius:8px;
+  padding:13px;
+  color:#fff;
+  text-align:center;
+  text-decoration:none;
+  font-size:14px}
+.acciones .secundario{
+  background:#eff0ff;
+  color:#3e28ff}
+.secundario ion-icon{
+  vertical-align:middle}
+
+.pago-demo{
+  display:inline-block;
+  color:#3427c7;
+  font-size:12px;
+  text-decoration:underline;
+  margin:0 0 10px}
+
+.etiquetas{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-top:12px;font-size:12px;color:#737b85}.etiquetas .categoria{background:#4029ff;color:white;padding:5px 14px;border-radius:20px}.interior ul{font-size:14px;line-height:1.6;color:#555}

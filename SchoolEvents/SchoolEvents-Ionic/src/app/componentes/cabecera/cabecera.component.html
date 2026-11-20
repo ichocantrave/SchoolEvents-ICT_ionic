@@ -1,0 +1,13 @@
+<ion-header class="cabecera">
+  <ion-toolbar>
+    <div class="barra-superior">
+      @if (titulo) {
+        <a routerLink="/app/inicio" class="volver" aria-label="Volver a inicio"><ion-icon name="arrow-back-outline"></ion-icon></a>
+        <span class="titulo-pantalla">{{ titulo }}</span>
+      } @else {
+        <a routerLink="/app/inicio" aria-label="Inicio de SchoolEvents"><img class="logo" src="assets/schoolevents/logo.png" alt="SchoolEvents"></a>
+      }
+      <a class="avisos" routerLink="/notificaciones" aria-label="Notificaciones"><ion-icon name="notifications"></ion-icon><span class="punto"></span></a>
+    </div>
+  </ion-toolbar>
+</ion-header>

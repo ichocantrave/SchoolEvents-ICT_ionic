@@ -10,7 +10,8 @@ export const CATEGORIAS: Categoria[] = [
   { id: 'religioso', nombre: 'Religioso', imagen: foto('categoria-religioso.png') }
 ];
 
-// Precio 0 = gratuito en esta maqueta. Solo Sevilla FC tiene precio confirmado en las capturas.
+// Precio 0 = freeeee
+// le add num y se pone como sub y el modo pago
 export const EVENTOS: Evento[] = [
   { id: 1, titulo: 'Feria de Ciencias', categoria: 'academico', fecha: '2027-04-13', hora: '09:00 - 14:00', lugar: 'Palacio de Congreso', imagen: foto('feriacienciachoco.png'), precio: 0, descripcion: 'Disfruta de experimentos, talleres y actividades científicas.' },
   { id: 2, titulo: 'Casa de la Ciencia', categoria: 'cultural', fecha: '2026-11-30', hora: '10:00 - 13:30', lugar: 'Casco Antiguo', imagen: foto('casacienciachoco.png'), precio: 0, descripcion: 'Descubre la ciencia con exposiciones y actividades para estudiantes.' },
